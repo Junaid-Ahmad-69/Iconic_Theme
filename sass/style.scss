@@ -1,0 +1,24 @@
+@import "variables";
+@import "MaxinFunction";
+@import "Header";
+@import "BannerSection";
+@import "MainSection";
+@import "FigureSection";
+@import "Foooter";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+.active{
+    color: $orange !important;
+}
+#set_1{
+    object-position: 100% 0% !important;
+}
+#set_2{
+    height: 225px !important;
+    object-position: 10% 100% !important;
+}

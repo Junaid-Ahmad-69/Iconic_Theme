@@ -1,0 +1,33 @@
+#footer{
+    background-image: linear-gradient(0deg, #e25500 0%, #ffae22 100%);   
+    margin:20px 0 3px 0;
+    .footer_content{
+        @include container; 
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        .footer-nav{
+            ul{
+                li{
+                    display: inline;
+                    list-style-type: none;
+                    a{
+                        color: $f_bnav;
+                        text-decoration: none;
+                        font-size: 12px;
+                        font-weight: bold;
+                        font-family: Arial;
+                        padding: 20px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        small{
+            color: $white;
+            font-size: 10px;
+            font-family:'Lucida Sans';
+            line-height: 16px;
+        }
+    }
+}
