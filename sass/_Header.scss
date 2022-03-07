@@ -2,21 +2,31 @@
 #header{
     background-color: $grey_head;
     filter: drop-shadow(0.5px 0.866px 2.5px rgba(0,0,0,0.51));
+    position: sticky;
+    top: 0;
+    z-index: 9999;
     .header-main{
         @include container;
         display: flex;
         justify-content: space-between;
         padding: 15px 0 10px 0;
         .logo{
-            // background-color: $white;
-            // width: 180px;
-            // height: 70px;
-            // border-radius:10px solid green;
             a{
                 img{
                     width: 155px;
                     height: 35px;
                 }
+            }
+        }
+        .menu{
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            z-index: 3;
+            display: none;
+            i{
+                font-size: 25px;
+                cursor: pointer;
             }
         }
         .navbar{
@@ -41,6 +51,96 @@
                             position: absolute;
                             bottom: -15px;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+// Tablet Responsive
+@media screen and (max-width:750px){
+    html{
+        font-size: 45%;
+        #header{
+            .logo{
+                padding-left:30px;
+            }
+            .menu{
+                display: block !important;
+            }
+            .navbar{
+                height: 100%;
+                width: 100% ;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                ul{
+                    background: $bord_asid;
+                    display: flex;
+                    flex-flow: column ;
+                    text-align: center;
+                    height: 100vh ;
+                    width: 100%;
+                    li{
+                        padding: 20px;
+                        a{
+                            font-size: 24px !important;
+                            img{
+                                display: none; 
+                            }
+                        }
+                    }
+                    :nth-child(8){
+                        display: none;
+                    }
+                    :nth-child(9){
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+// Mobile Responsive
+@media screen and (max-width:425px){
+    html{
+        font-size: 45%;
+        #header{    
+            .logo{
+                padding-left:30px;
+            }
+            .menu{
+                display: block !important;
+            }
+            .navbar{
+                height: 100%;
+                width: 100% ;
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: none;
+                ul{
+                    background: $bord_asid;
+                    display: flex;
+                    flex-flow: column ;
+                    text-align: center;
+                    height: 100vh ;
+                    width: 100%;
+                    li{
+                        padding: 20px;
+                        a{
+                            font-size: 20px !important;
+                            img{
+                                display: none; 
+                            }
+                        }
+                    }
+                    :nth-child(8){
+                        display: none;
+                    }
+                    :nth-child(9){
+                        display: none;
                     }
                 }
             }

@@ -42,3 +42,86 @@
         }
     }
 }
+// Tablet Responsive
+@media screen and (max-width:750px){
+    html{
+        font-size:45%;
+        .banner{
+            .banner-top{
+                display: grid;
+                grid-template-columns: repeat(2,275px 370px);
+                .banner-text{
+                    h1{
+                        width: 300px;
+                        font-size: 22px;
+                    }
+                    p{
+                        width: 300px;
+                        font-size: 14px;
+                    }
+                }
+                .banner-image{
+                    .top{
+                        width: 92%;
+                        position: absolute;
+                        top: 40px !important;
+                    }
+                    .base{
+                        width: 92%;
+                        position: absolute;
+                        bottom: -16px !important;
+                    }
+                    .text{
+                        width: 67%;
+                        position: absolute;
+                        top:48px;
+                        left: 48px;
+                    }
+                }
+            }
+        }
+    }
+}
+// Mobile Responsive
+@media screen and (max-width:425px){
+    html{
+        font-size:45%;
+        .banner{
+            .banner-top{
+                display: block;
+                padding-left: 70px;
+                .banner-text{
+                    text-align: center;
+                    h1{
+                        padding-top: 15px;
+                        font-size: 17px;
+                    }
+                    p{
+                        width: 300px;
+                        font-size: 12px;
+                    }
+                }
+                .banner-image{
+                    padding-left: 40px;
+                    .top{
+                        position: absolute;
+                        top: 32px !important;
+                        width: 65%;
+                    }
+                    .base{
+                        position: absolute;
+                        bottom: -132px !important;
+                        left: 40px;
+                        width: 65%;
+                    }
+                    .text{
+                        position: absolute;
+                        left: 71px;
+                        top: 38px;
+                        width: 47%;
+                    }
+                }
+            }
+        }
+    }
+}

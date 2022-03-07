@@ -1,6 +1,7 @@
 #footer{
     background-image: linear-gradient(0deg, #e25500 0%, #ffae22 100%);   
     margin:20px 0 3px 0;
+    filter: drop-shadow(0 0 2.1px rgba(0, 0, 0, 1.6));
     .footer_content{
         @include container; 
         display: flex;
@@ -16,6 +17,7 @@
                         text-decoration: none;
                         font-size: 12px;
                         font-weight: bold;
+                        letter-spacing: .5px;
                         font-family: Arial;
                         padding: 20px;
                         text-transform: uppercase;
@@ -25,9 +27,54 @@
         }
         small{
             color: $white;
-            font-size: 10px;
+            font-size: 11px;
             font-family:'Lucida Sans';
-            line-height: 16px;
+            letter-spacing: 0.5px;
+            line-height: 25px;
+        }
+    }
+}
+// Tablet Responsive
+@media screen and (max-width:750px){
+    #footer{
+        .footer_content{
+            padding: 0 ;
+            display: block;
+            text-align: center;
+            .footer-nav{
+                padding-top: 10px;
+                ul{
+                    padding: 10px;
+                    li{
+                        a{
+                            font-size: 11px;
+                            padding: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Mobile Responsive
+@media screen and (max-width:425px){
+    #footer{
+        .footer_content{
+            display: block;
+            text-align: center;
+            .footer-nav{
+                line-height: 20px;
+                padding-top:0 !important ;
+                ul{
+                    padding-bottom: 0px !important;
+                    li{
+                        a{
+                            font-size: 11px;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
 }

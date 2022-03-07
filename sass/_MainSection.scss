@@ -1,9 +1,10 @@
 #main{
     background-color: $main_back;
-    filter: brightness(98%);
+    filter: drop-shadow(0 0 3.5px rgba(0,0,0,0.75));    
     #section-top{
         @include container;   
-        background-image: linear-gradient(0deg, #f1f1f1 0%, #ffffff 5%, #ffffff 100%, #e9ebef 100%);
+        background-image: linear-gradient(0deg, #f1f1f1 0%, #ffffff 3%, #ffffff 100%, #e9ebef 100%);
+        filter: brightness(98%);
         display: flex;      
         .sect-text{
             flex: 0 0 60%;
@@ -53,7 +54,6 @@
         }
         #section{
         @include container;
-        background-image: linear-gradient(0deg, #f1f1f1 0.5%, #ffffff 1%, #ffffff 100%, #e9ebef 100%);
         position: relative;
         h2{
             font-size: 18px;
@@ -126,3 +126,101 @@
             }
         }
     }
+    // Tablet responsive
+@media screen and (max-width:750px){
+    #main{
+        #section-top{
+            display: block;
+         .sect-text{
+             text-align: center;
+             padding: 15px 80px;
+             h4{
+                font-size: 18px;
+                padding: 0;
+                }
+            } 
+            .sect-btn{
+            padding: 12px 135px !important;
+            }
+        }
+        #section{
+            h2{
+                text-align: center;
+                padding: 15px 0;
+            }
+            .content{
+                h4{
+                    padding: 3px;
+                    margin: 4px 0;
+                }
+                p{
+                    width: 350px;
+                    line-height: 20px;
+                    text-align: justify;
+                    font-size: 12px;
+                    padding: 10px 0;
+                }
+            }
+            .aside_left{
+                position: absolute;
+                top: 60px;
+                h2{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+// Mobile responsive
+@media screen and (max-width:425px){
+    #main{
+        #section-top{
+            display: block;
+         .sect-text{
+             text-align: center;
+             padding: 15px;
+             h4{
+                font-size: 14px;
+                padding: 0;
+                width: 350px;
+                }
+            } 
+            .sect-btn{ 
+                padding: 0 !important;
+                text-align: center;
+                padding-bottom: 20px !important;
+                .sign-up,
+                .learn{
+                    font-size: 12px;
+                    height: 35px;
+                }
+            }
+        }
+        #section{
+            h2{
+                text-align: center;
+                padding: 10px 0;
+            }
+            .content{
+                h4{
+                    padding: 3px;
+                    margin: 2px 0;
+                }
+                p{
+                    width: 390px;
+                    line-height: 20px;
+                    text-align: justify;
+                    font-size: 12px;
+                    padding: 10px 0;
+                }
+            }
+            .aside_left{
+                display: none;
+
+                h2{
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
