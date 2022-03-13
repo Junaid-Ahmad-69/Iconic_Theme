@@ -1,44 +1,35 @@
 .banner{
     background-image: linear-gradient(0deg, #e25500 0%, #ffae22 100%);
-    height: 264px;
-    .banner-top{
+    .container{
         @include container;
-        display: grid;
-        grid-template-columns: repeat(2, 580px auto);
-        grid-gap: 90px;
+        display: flex;
+        // grid-template-columns: repeat(2, 1fr);
+        // grid-gap: 90px;
         .banner-text{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-flow: column;
             h1{
-                padding-top: 13%;            
                 color: $white;
                 font-size: 30px;
                 font-weight: bold;
                 text-transform: uppercase;
+                line-height: 30px;
                 filter: drop-shadow(0.5px 0.866px 0.5px rgba(0,0,0,0.34));
+                padding-bottom:6px;
             }
-            p{
-                padding-top: 10px;
-                font-size: 17px;
+            h2{
+                font-size: 16px;
                 color:$smoke;
                 font-weight: bold;
-                width: 460px;
+                line-height: 17px;
                 text-transform: uppercase;
                 filter: drop-shadow(0.5px 0.866px 0.5px rgba(0,0,0,0.34));
             }     
         }
         .banner-image{
-            position: relative;
-            padding-top: 20px;
-            .text{
-                position: absolute;
-                top: 31px;
-                left: 64px;
-                object-fit: cover;
-            }
-            .base{
-                position: absolute;
-                left: 0;
-                bottom: -12px
-            }
+            margin: 20px 0 -23px 0;
         }
     }
 }

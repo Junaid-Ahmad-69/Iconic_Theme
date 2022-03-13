@@ -5,12 +5,19 @@
 @import "MainSection";
 @import "FigureSection";
 @import "Foooter";
+@import "button";
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+}
+body{
+    font-size: 14px;
+    line-height: 21px;
+    color: $bargnd;
+    padding-bottom: 10px;
 }
 .active{
     color: $orange !important;

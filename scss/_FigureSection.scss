@@ -1,9 +1,10 @@
-#fig-main{
+.feature{
     background-color: $main_back;
-    .fig-back{
+    .container{
         @include container;
         display: grid;
         grid-template-columns: repeat(3,1fr);
+        margin-bottom: 30px;
         .fig_1{
             margin-top:10%;
             border: 1px solid $bord_asid;
@@ -47,8 +48,8 @@
 }
 // Table Responsive
 @media screen and (max-width:750px){
-    #fig-main{
-        .fig-back{
+    #feature{
+        .container{
             margin-top: 20px;
             display: grid;
             grid-template-columns: repeat(2,1fr);
@@ -68,8 +69,8 @@
 }
 // Mobile Responsive
 @media screen and (max-width:425px){
-    #fig-main{
-        .fig-back{
+    .feature{
+        .container{
             display: block;
             margin: 20px 0;
             .fig_1{

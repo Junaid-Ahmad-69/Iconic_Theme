@@ -5,7 +5,7 @@
     position: sticky;
     top: 0;
     z-index: 9999;
-    .header-main{
+    .container{
         @include container;
         display: flex;
         justify-content: space-between;
