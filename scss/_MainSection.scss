@@ -24,14 +24,16 @@
             .sign-up{
                 @include button;
                 background-image: linear-gradient(0deg, #e25500 0%, #ffae22 100%);
+                padding: 10px 50px;
                 &:hover{
                     background-image: linear-gradient(0deg, #ffae22 0%, #e25500 100%);
                     color: $white;
-                }
+                    }
                 }
                 .learn{
                     @include button;
                     background-image: linear-gradient(0deg, #ffae22 0%, #e25500 100%);
+                    padding: 10px 50px;
                     &:hover{
                         background-image: linear-gradient(0deg, #e25500 0%, #ffae22 100%);
                         color: $white;
@@ -66,46 +68,49 @@
             }
         }
         .aside-right{
-            margin: 20px;
-            border: 1px solid $bord_asid;
-            border-radius: 3px;
-            h2{
-                background-color: $back;
-                text-transform: uppercase;
-                font-size: 18px;
-                padding: 15px;
-                color: $dark_black;
-                font-family: Arial;
-            }
-            .article-content{
-                display: flex;
-                gap: 20px;
-                padding: 8px;
-                border-top: 1px solid $bord_asid ;
-                .holder{
-                    border: 1px solid $bord_asid;
-                    border-radius: 1px;
-                    width:100px;
-                    img{
-                        object-fit: cover;
-                        height: 60px;
-                        padding: 5px;
-                        width: 100%;
-                        margin-bottom: 0;
-                        padding-bottom: 0;
-                    }
+            .aside-content{
+                margin: 20px;
+                border: 1px solid $bord_asid;
+                border-radius: 3px;
+                
+                h2{
+                    background-color: $back;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    padding: 15px;
+                    color: $dark_black;
+                    font-family: Arial;
                 }
-                .holder-content{
-                    line-height: 20px;
-                    h3{
-                        padding-top:10px;
-                        font-size: 14px;
-                        color:$light;
-                        font-family: 'Lucida Sans';
+                .article-content{
+                    display: flex;
+                    gap: 20px;
+                    padding: 8px;
+                    border-top: 1px solid $bord_asid ;
+                    .holder{
+                        border: 1px solid $bord_asid;
+                        border-radius: 1px;
+                        width:100px;
+                        img{
+                            object-fit: cover;
+                            height: 60px;
+                            padding: 5px;
+                            width: 100%;
+                            margin-bottom: 0;
+                            padding-bottom: 0;
+                        }
                     }
-                    p{
-                        font-size:11px;
-                        color:$bargnd;
+                    .holder-content{
+                        line-height: 20px;
+                        h3{
+                            padding-top:10px;
+                            font-size: 14px;
+                            color:$light;
+                            font-family: 'Lucida Sans';
+                        }
+                        p{
+                            font-size:11px;
+                            color:$bargnd;
+                        }
                     }
                 }
             }
@@ -115,42 +120,61 @@
 @media screen and (max-width:750px){
     #main{
         .tagline{
-            display: block;
+            gap: 30px;
          .tagline-text{
-             text-align: center;
-             padding: 15px 80px;
+             flex: 0 0 55%;
              h2{
-                font-size: 18px;
-                padding: 0;
+                font-size: 17px;
+                br{
+                    display: none;
+                    }
                 }
             } 
             .tagline-link{
-            padding: 12px 135px !important;
+                .sign-up{
+                    text-align: center;
+                    padding: 8px !important;
+                    width: 140px !important;
+                    height: 38px;
+                    font-size: 12px;
+                }
+                .learn{
+                    text-align: center;
+                    padding: 8px !important;
+                    width: 140px !important;
+                    height: 38px;
+                    font-size: 12px;
+                }
             }
         }
         #section{
-            h2{
-                text-align: center;
-                padding: 15px 0;
-            }
-            .content{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 40px;
+            .section-container{
                 h2{
-                    padding: 3px;
-                    margin: 4px 0;
+                    padding: 15px 0 5px 0;
                 }
-                p{
-                    width: 350px;
-                    line-height: 20px;
-                    text-align: justify;
-                    font-size: 12px;
-                    padding: 10px 0;
+                .content{
+                    h2{
+                        padding: 1px;
+                        margin:  1px 0;
+                    }
+                    p{
+                        line-height: 20px;
+                        text-align: justify;
+                        font-size: 12px;
+                        padding: 10px 0;
+                    }
                 }
             }
-            .aside_left{
-                position: absolute;
-                top: 60px;
-                h2{
-                    padding: 10px;
+            .aside-right{
+                transform: translateY(10%);
+                .aside-content{
+                    h2{
+                    padding: 10px !important;
+                    }
+
                 }
             }
         }
@@ -163,46 +187,37 @@
             display: block;
          .tagline-text{
              text-align: center;
-             padding: 15px;
+             padding: 10px;
              h2{
                 font-size: 14px;
                 padding: 0;
                 width: 350px;
                 }
             } 
-            .tagline-btn{ 
-                padding: 0 !important;
-                text-align: center;
-                padding-bottom: 20px !important;
-                .sign-up,
-                .learn{
-                    font-size: 12px;
-                    height: 35px;
-                }
+            .tagline-link{ 
+                padding: 10px;
+                justify-content: space-around;
             }
         }
         #section{
-            h2{
-                text-align: center;
-                padding: 10px 0;
-            }
-            .content{
-                h2{
-                    padding: 3px;
-                    margin: 2px 0;
-                }
-                p{
-                    width: 390px;
-                    line-height: 20px;
-                    text-align: justify;
-                    font-size: 12px;
-                    padding: 10px 0;
+            display: block;
+            .section-container{
+                .content{
+                    h2{
+                        padding: 3px;
+                        margin: 2px 0;
+                    }
+                    p{
+                        line-height: 20px;
+                        text-align: justify;
+                        font-size: 12px;
+                    }
                 }
             }
             .aside-right{
-                display: none;
-                h2{
-                    padding: 10px;
+                .aside-content{
+                    margin: 0px !important;
+                    transform: translateY(-43px);
                 }
             }
         }
